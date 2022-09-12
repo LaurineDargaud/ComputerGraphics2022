@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 1 - Part 2</title>
+  </head>
+ 
+  <body onload="main()">
+    <canvas id="c" width="400" height="400"></canvas>
+
+    <script src="../common/initShaders.js"></script>
+    <script src="../common/webgl-utils.js"></script>
+    <script src="../common/MV.js"></script>
+
+    <!-- Vertex shader code -->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 a_Position;
+        void main() {
+            gl_Position = a_Position;
+        }
+    </script>
+
+    <!--Fragment shader code -->
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision mediump float;
+        void main() {
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        }
+    </script>
+
+    <script src="exercise1_part5.js"></script>
+
+  </body>
+</html>
